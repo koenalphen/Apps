@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <script type="text/javascript" src="{% static 'Apps/jquery-2.1.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'Apps/Chart.js' %}"></script>
+        <script type="text/javascript" src="{% static 'Apps/AjaxInDjango.js' %}"></script>
+        <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+        {% block head %}
+        {% endblock %}
+    </head>
+
+
+    <body>
+        <!-- banner -->
+        <span name="banner">
+            <img class="row" src="{% static 'img/wide.jpg' %}">
+        </span>
+
+        <!-- navigation -->
+        <ul class="nav nav-tabs">
+            <li><a href="{% url 'trackTime:track' %}">trackTime</a></li>
+        </ul>
+
+        {% block AppContent %}
+        {% endblock %}
+    </body>
+</html>

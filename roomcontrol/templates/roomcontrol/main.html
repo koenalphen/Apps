@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'roomcontrol/style.css' %}" />
+<script type="text/javascript" src="{% static 'roomcontrol/main.js' %}"></script>
+<title>Main</title>
+{% endblock %}
+
+{% block AppContent %}
+Button list:
+<div class="row">
+    {% if devices %}
+    {% for device in devices %}
+    <div class="device_box">
+        <button class="device_toggle_state" id="{{ device.pk }}" state="{{ device.get_current_state }}">{{ device.name }}</button>
+        {{ device.get_current_state }}
+        <br>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
