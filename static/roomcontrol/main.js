@@ -11,4 +11,5 @@ $(document).ready(function(){
             $(parent).text = "1";
             $(this).attr("state") = "1";
         }
+ }
 });
