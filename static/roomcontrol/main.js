@@ -9,6 +9,6 @@ $(document).ready(function(){
             state = 1;
             $(parent).text = "1"
         }
-        $.get("submit", {state: state, device_id: device_to_edit});
+        $.get("roomcontrol/submit", {state: state, device_id: device_to_edit});
     });
 });
