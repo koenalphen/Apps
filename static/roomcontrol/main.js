@@ -5,11 +5,11 @@ $(document).ready(function(){
         if (old_state == 1){
             state = 0;
             $(parent).text = "0";
-            $(this).attr("state") = "0";
+            $(this).attr("state", "0");
         } else {
             state = 1;
             $(parent).text = "1";
-            $(this).attr("state") = "1";
+            $(this).attr("state", "1");
         }
  });
 });
